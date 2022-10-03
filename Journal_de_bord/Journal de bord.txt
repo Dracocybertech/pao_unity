@@ -1,0 +1,81 @@
+Semaine 27_09_2022
+
+	Ryan :
+
+	Setup du premier GIT
+	Installation de Unity
+	Rédaction du brouillon de planning prévisionnel
+	Importation des assets.
+	Début de tuto.
+	
+
+	Ambre :
+	
+	Lecture du fonctionnement du RL.
+
+	Marine :
+	
+	Rôles :
+	
+		Marine : Création du manoir, mise en place des prefabs, gestion de Overleaf pour le rapport, level design.
+		
+		Ambre :
+		
+		Ryan : Gestion du Git et des outils de gestion de projet, développement de scripts, game design, beta test,
+
+Semaine 04_10_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Semaine 11_10_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Semaine 18_10_2022
+	Ryan :
+	Ambre :
+	Marine :
+	
+Semaine 25_10_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Semaine 01_11_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Semaine 08_11_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Semaine 15_11_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Semaine 22_11_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Semaine 29_11_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Semaine 06_12_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Semaine 13_12_2022
+	Ryan :
+	Ambre :
+	Marine :
+
+Rendu le 15_12_2022
