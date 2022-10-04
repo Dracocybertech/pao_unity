@@ -2,26 +2,28 @@ Semaine 27_09_2022
 
 	Ryan :
 
-	Setup du premier GIT
-	Installation de Unity
-	Rédaction du brouillon de planning prévisionnel
-	Importation des assets.
-	Début de tuto.
+		Setup du premier GIT
+		Installation de Unity
+		Rédaction du brouillon de planning prévisionnel
+		Importation des assets.
+		Début de tuto.
 	
 
 	Ambre :
 	
-	Lecture du fonctionnement du RL.
+		Lecture du fonctionnement du RL. Tuto Unity déjà effectués.
 
 	Marine :
+	
+		
 	
 	Rôles :
 	
 		Marine : Création du manoir, mise en place des prefabs, gestion de Overleaf pour le rapport, level design.
 		
-		Ambre :
+		Ambre : Un peu de scripting, RL, game-design.
 		
-		Ryan : Gestion du Git et des outils de gestion de projet, développement de scripts, game design, beta test,
+		Ryan : Gestion du Git et des outils de gestion de projet, développement de scripts, game design, beta test.
 
 Semaine 04_10_2022
 	Ryan :

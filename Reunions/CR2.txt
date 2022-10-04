@@ -1,0 +1,17 @@
+ Gérer le temps avec fixedupdate ou des biblio autres pour éviter d'être dépendants des autres. Ne pas se cadencer sur le moteur de rendu.
+ 
+ Sous monobehavior, on a transform (ordre3, vitesse accel, posi), composants. this.getcomponent, this.getcomponents,
+ 
+ rigidbody : pour appliquer la physique
+ 
+ Philo de Unity : on veut récupérer le rigidbody : on met un rigidbody en public et on drag & drop un rigidbody public depuis. On utilise l'éditeur de Unity pour faire du click click.
+ 
+ RL : rien savvoir au début pour le bot puis apprendre progressivement. En RL on récompense non pas par action mais par atteinte d'objectif (atteinte d'état). Plus il y a d'état plus c'est long car il faut explorer les états et actions qui y mènent.  Définir une fct de récompense. On commence au hasard.
+ 
+ Tune le RL pour que l'IA s'améliore ni trop vite, ni trop lentement. -> altérer le game et level design pour que l'ennemi soit freiné dans sa course. A chaque mort du joueur, on rajoute des possibilités.
+ 
+ Rendre la bête un peu bête.
+ 
+ La technique d'abord, les skins après.
+ 
+ 

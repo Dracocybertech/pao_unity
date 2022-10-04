@@ -1,26 +1,30 @@
 Pour la semaine 04_10_2022 :
 
-Installer Unity et charger les fichiers du groupe précédent.
-Commencer tuto Unity pour ceux qui débutent.
-V1 du GIT
-Planning prévisionnel brouillon à affiner en réunion.
-Commencer à travailler sur le RL.
-Donner des rôles aux membres du projet.
+	Installer Unity et charger les fichiers du groupe précédent.
+	Commencer tuto Unity pour ceux qui débutent.
+	V1 du GIT
+	Planning prévisionnel brouillon à affiner en réunion.
+	Commencer à travailler sur le RL.
+	Donner des rôles aux membres du projet.
 
 
 
 Pour la semaine 11_10_2022 :
 
-Trouver un moyen d'utiliser Nuage de façon opti
-Avancer voir terminer le tuto Unity de base.
-Essayer de comprendre les scripts déjà codés.
+	Pour Ambre : implémenter Mountain Car de OpenAI Gym pour comprendre comment ça fct, montrer et expliquer le code.
+
+	Trouver un moyen d'utiliser Nuage de façon opti
+
+	Avancer voir terminer le tuto Unity de base.
+
+	Essayer de comprendre les scripts déjà codés.
 
 
 
 Pour la semaine 18_10_2022 :
 
-Améliorer des scripts.
-Commencer à implémenter du RL dans unity.
+	Améliorer des scripts.
+	Commencer à implémenter du RL dans unity.
 
 Pour la semaine 25_10_2022 :
 

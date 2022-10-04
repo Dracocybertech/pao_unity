@@ -1,2 +1,15 @@
-*.unitypackage
-/PAO\ Unity
+#J'exclue tout
+/*
+#Sauf les dossiers :
+!/Reunions
+!/Journal_de_bord
+!/Rapport
+!/README.md
+#Intégrer le dossier Scripts et prefabs de PAO Unity
+!/PAO_Unity
+/PAO_Unity/*
+!/PAO_Unity/Assets
+/PAO_Unity/Assets/*
+!/PAO_Unity/Assets/Scripts
+!/PAO_Unity/Assets/Scenes
+
