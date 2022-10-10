@@ -26,9 +26,16 @@ Semaine 27_09_2022
 		Ryan : Gestion du Git et des outils de gestion de projet, développement de scripts, game design, beta test.
 
 Semaine 04_10_2022
-	Ryan :
+
+	Ryan : tuto microgames FPS avec altération de scripts et Lego OK
+		https://www.raywenderlich.com/980-introduction-to-unity-scripting -> tuto de Unity 5 mais la base n'a pas l'air d'avoir changée. Très intéressant. Sera utile pour la suite.
+		Début de recherches pour mieux coder les portes dans la scène.
+		
+	
 	Ambre :
+	
 	Marine :
+	
 
 Semaine 11_10_2022
 	Ryan :

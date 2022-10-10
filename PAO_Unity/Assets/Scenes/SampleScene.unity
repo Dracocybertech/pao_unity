@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414729, b: 0.121078685, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1576,7 +1576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 182541934}
-  dialog: "Ferm\xE9 \xE0 cl\xE9 !"
+  dialogFerme: 
+  dialogOuvert: 
   playerInRange: 0
   playerHasKey: 0
   objet: {fileID: 328670453}
@@ -3893,6 +3894,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23863354656470082, guid: 4277c84f4eb45414089869ec9eed16a9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 65687739679008184, guid: 4277c84f4eb45414089869ec9eed16a9, type: 3}
       propertyPath: m_Size.y
       value: 5.219594
@@ -6194,7 +6199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 182541934}
-  dialog: "Ferm\xE9 \xE0 cl\xE9 !"
+  dialogFerme: 
+  dialogOuvert: 
   playerInRange: 0
   playerHasKey: 0
   objet: {fileID: 328670453}
@@ -8602,7 +8608,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 182541934}
-  dialog: "Ferm\xE9 \xE0 cl\xE9 !"
+  dialogFerme: Nope
+  dialogOuvert: Yes
   playerInRange: 0
   playerHasKey: 0
   objet: {fileID: 328670453}
@@ -12932,7 +12939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 182541934}
-  dialog: "Ferm\xE9 \xE0 cl\xE9 !"
+  dialogFerme: 
+  dialogOuvert: 
   playerInRange: 0
   playerHasKey: 0
   objet: {fileID: 328670453}
@@ -15178,7 +15186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 182541934}
-  dialog: "Ferm\xE9 \xE0 cl\xE9 !"
+  dialogFerme: 
+  dialogOuvert: 
   playerInRange: 0
   playerHasKey: 0
   objet: {fileID: 328670453}
@@ -15624,7 +15633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919087763700580210, guid: 879e17eb9d81d254b96a02081e3db444, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.98
+      value: 21.73
       objectReference: {fileID: 0}
     - target: {fileID: 7919087763700580210, guid: 879e17eb9d81d254b96a02081e3db444, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15632,7 +15641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7919087763700580210, guid: 879e17eb9d81d254b96a02081e3db444, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.64
+      value: 10.62
       objectReference: {fileID: 0}
     - target: {fileID: 7919087763700580210, guid: 879e17eb9d81d254b96a02081e3db444, type: 3}
       propertyPath: m_LocalRotation.w

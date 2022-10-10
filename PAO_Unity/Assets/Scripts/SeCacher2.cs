@@ -45,7 +45,7 @@ public class SeCacher2 : MonoBehaviour
             camJoueur.enabled = false;
             player.SetActive(false);
 
-            this. camJoueur.transform.parent=null;
+            this.camJoueur.transform.parent=null;
             
             this.ancienTransform = camJoueur.transform;
             this.positionAncienTransform =  this.ancienTransform.position;

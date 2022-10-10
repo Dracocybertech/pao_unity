@@ -15,7 +15,7 @@ Pour la semaine 11_10_2022 :
 
 	Trouver un moyen d'utiliser Nuage de façon opti
 
-	Avancer voir terminer le tuto Unity de base.
+	Avancer, voir terminer le tuto Unity de base.
 
 	Essayer de comprendre les scripts déjà codés.
 
