@@ -23,8 +23,10 @@ Pour la semaine 11_10_2022 :
 
 Pour la semaine 18_10_2022 :
 
-	Améliorer des scripts.
-	Commencer à implémenter du RL dans unity.
+	Améliorer les portes pour qu'elles soient intéractives.
+	Créer la boîte noire en python afin d'entraîner le modèle d'IA.
+	
+	
 
 Pour la semaine 25_10_2022 :
 
