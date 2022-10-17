@@ -2,7 +2,7 @@ class BoiteNoire:
 
 	def __init__(self):
 		
-		self.grille = [[0,0,0,0,0,0],[0,0,0,-1,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,1,0,0,0,0],[0,0,0,0,0,0]]
+		self.grille = [[0,0,0,0,0,0],[0,0,0,-1,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,1,0,0,0,0],[0,0,0,0,0,0]] #1 est la sortie
 		self.spawnXY = [1,3]
 		
 		self.positionXY = self.spawnXY.copy()
@@ -70,20 +70,20 @@ class BoiteNoire:
 	def getEtat(self):
 		
 		if (self.getVal() != 1):
-			return "Neutre"
+			return 0
 		else:
-			return "Sortie"
-		
+			return 1
+					
 	
 	def deplacement(self,wasd):
 		
-		if (wasd == 'w'):
-			self.bas()
-		elif (wasd == 'a'):
-			self.gauche()
-		elif (wasd == 's'):
+		if (wasd == 0):
 			self.haut()
-		elif (wasd == 'd'):
+		elif (wasd == 1):
+			self.gauche()
+		elif (wasd == 2):
+			self.bas()
+		elif (wasd == 3):
 			self.droite()
 		else:
 			return "Erreur, mauvaise commande"

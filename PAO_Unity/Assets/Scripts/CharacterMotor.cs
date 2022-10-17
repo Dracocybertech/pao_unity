@@ -42,7 +42,7 @@ public class CharacterMotor : MonoBehaviour{
         float speedX = Input.GetAxis("Horizontal"); //gauche/droite
         float speedY = moveDirection.y; //haut/bas
 
-        //suis-je en traind de courir ?
+        //suis-je en train de courir ?
         if (Input.GetKey(KeyCode.LeftShift))
         {
             speedX = speedX * runSpeed;

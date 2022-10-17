@@ -38,8 +38,11 @@ Semaine 04_10_2022
 	
 
 Semaine 11_10_2022
-	Ryan :
+
+	Ryan : BoiteNoireV1.2 en Python. Tests avec des portes presque fonctionnelles. Apprentissage du système de collision.
+	
 	Ambre :
+	
 	Marine :
 
 Semaine 18_10_2022

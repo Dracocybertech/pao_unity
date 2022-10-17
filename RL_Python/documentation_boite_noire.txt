@@ -1,0 +1,9 @@
+Donner un chiffre entre 0 et 3
+
+Puis rend un chiffre entre 0 ou 1, 1 étant la récompense 
+
+from boite_noire_RL import BoiteNoire
+
+BT = BoiteNoire()
+
+BT.deplacement(0) par ex.
