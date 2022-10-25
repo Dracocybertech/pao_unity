@@ -11,6 +11,6 @@
 /PAO_Unity/*
 !/PAO_Unity/Assets
 /PAO_Unity/Assets/*
-!/PAO_Unity/Assets/Scripts
-!/PAO_Unity/Assets/Scenes
+!/PAO_Unity/Assets/Scripts/*
+!/PAO_Unity/Assets/Scenes/*
 

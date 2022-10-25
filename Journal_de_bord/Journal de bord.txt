@@ -46,7 +46,7 @@ Semaine 11_10_2022
 	Marine :
 
 Semaine 18_10_2022
-	Ryan :
+	Ryan : La rotation de l'objet se fait par rapport à la position du gameObject, c'est donc le gond. Tests avec les différentes vues car impossibel de voir le GameObject.
 	Ambre :
 	Marine :
 	
