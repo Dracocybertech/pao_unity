@@ -1,0 +1,3 @@
+Ryan doit coder un environnement, boite noire, map logique et mettre à jour l'état de la carte. DOnc coder en python un environnement. Side project pour aider à implémenter le QLearning. Possiblement une grille, une map, des objets. Donner des inputs et sortir un état. Fonction d'init qui prend un état initial et une fonction update.
+
+Ambre se focus sur le QLearning en entraînant le modèle sur la boîte noire. 

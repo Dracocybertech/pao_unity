@@ -1,0 +1,14 @@
+QLearning fonctionnel mais nombre d'étapes trop grand. Trouver un moyen d'optimiser l'apprentissage avec le moins d'épisodes possibles. Voir si le déplacement se fait par points cardinaux.
+
+Début de portes OK mais préparer les états ouvert, verrouillé, etc.
+
+
+A faire :
+
+Pour Ambre : faire une présentation du QLearning pour la team. Sortir la vue graphique pour voir la progression.
+
+Pour Ryan : Gestion d'Inv, test clé, etats de la porte, comprendre où sont les gonds avec le repère local. 
+
+Pour Marine : Se remettre à Unity. Penser level design avec les éléments de gameplay.
+
+

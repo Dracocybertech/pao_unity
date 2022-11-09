@@ -1,0 +1,2 @@
+WIP
+Le tuto sera à jour quand on aura besoin d'utiliser GIT sérieusement.

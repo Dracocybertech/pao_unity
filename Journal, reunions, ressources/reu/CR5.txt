@@ -1,0 +1,11 @@
+ Idée : avoir un gamemaster qui observe le jeu et donne des états. Faire des premiers rounds avec un monstre invisible qui apprend dans le fond.
+ 
+ Il faut gérer la fréquence de décision. Par exemple en fct du temps, une action par sec. Pas de temps de décision.
+ 
+ Quels sont les états, quelles sont les actions dans Unity ? Que donne le Gamemaster ?
+ 
+ A faire : liste d'états et d'actions. Essayer de faire une Qtablel raisonnable pour les tester.
+ 
+ A gérer sous unity : prendre une frame et pondre un état et en même temps si Ambre donne une action le gameMaster dois faire qqch
+ 
+ Attention au game master, il faut link 200 portes dans le script. Unity peut détecter ce qui est autour du monstre avec des trigger. Puis retourner des états.

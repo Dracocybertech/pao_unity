@@ -1,8 +1,7 @@
 #J'exclue tout
 /*
 #Sauf les dossiers :
-!/Reunions
-!/Journal_de_bord
+!/Journal, reunions, ressources
 !/Rapport
 !/README.md
 !/RL_Python

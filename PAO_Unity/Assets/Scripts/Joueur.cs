@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Joueur : MonoBehaviour
 {
+
+    public int pointDeVie;
+
+    public bool visible = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        //setVisibilite();
         
     }
 
@@ -15,4 +22,23 @@ public class Joueur : MonoBehaviour
     {
         
     }
+
+    void setVisibilite()
+    {
+
+        //GetComponent(MeshRenderer).enabled = visible;
+        visible = ! visible;
+
+    }
+
+    int getHP()
+    {
+            return this.pointDeVie;
+    }
+
+    bool getVisibilite()
+    {
+        return this.visible;
+    }
+
 }

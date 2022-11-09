@@ -1,0 +1,16 @@
+Réserver la salle chaque semaine
+ 
+3h de travail perso par semaine.
+
+Note basée sur le travail et non le résultat.
+
+A la fin : soutenance.
+	Livrable : rapport en forme de journal de bord feuille de route. A dest de nous du futur ou des suivants.
+	Démo live : 
+
+A faire : faire la suite de Paul en apprentisage par renforcement. Compléter par exemple la détection si on n'est pas caché.
+
+2 scènes : une chez Marine et une sandbox.
+	
+	
+To do le 4 Octobre.

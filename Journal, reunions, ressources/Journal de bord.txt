@@ -46,12 +46,12 @@ Semaine 11_10_2022
 	Marine :
 
 Semaine 18_10_2022
-	Ryan : La rotation de l'objet se fait par rapport à la position du gameObject, c'est donc le gond. Tests avec les différentes vues car impossibel de voir le GameObject.
+	Ryan : La rotation de l'objet se fait par rapport à la position du gameObject, c'est donc le gond. Tests avec les différentes vues car impossible de voir le GameObject.
 	Ambre :
 	Marine :
 	
 Semaine 25_10_2022
-	Ryan :
+	Ryan : 
 	Ambre :
 	Marine :
 
@@ -61,7 +61,7 @@ Semaine 01_11_2022
 	Marine :
 
 Semaine 08_11_2022
-	Ryan :
+	Ryan : Début GameMaster.
 	Ambre :
 	Marine :
 

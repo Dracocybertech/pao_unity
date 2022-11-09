@@ -1,0 +1,22 @@
+ Dans fixedupdate, récupérer les infos. Si elles ont changée, les mettre à jour et les envoyer
+ 
+ 10 actions
+ 
+ 10 états
+ 
+ Ne pas dépasser une grille de 100
+ 
+ Actions du monstre : frapper, suivre, attendre, ouvrir, se déplacer devant, demi-tour, tourner à droite, tourner à gauche
+ 
+ Etats de la QTable : Voit rien, voit le joueur, joueur blessé, voit porte, suit joueur,se cogne, à portée du joueur, à portée de la porte.
+ 
+ Récompense : joueur mort 100 , blesser joueur 25, ouvrir porte utilisée par le joueur pendant la dernière minute 5, suivre joueur 2, suivre dernière position 1, ne fait rien -1, se cogne -2,
+ 
+ Renvoyer Position du joueur dans les états ? 
+ 
+ Si voit joueur, faire pathfinding. Si suit le pathfinding alors suit le joueur.
+ 
+ Enregistrer la dernière position vue par le monstre du joueur ou tout simplement aller au bout du pathfinding.
+
+ 
+ 
