@@ -23,20 +23,29 @@ public class Joueur : MonoBehaviour
         
     }
 
-    void setVisibilite()
+    public void setVisibilite()
     {
+        if (visible)
+        {
+            visible = ! visible;
+            GetComponent<Renderer>().enabled = visible;
+        }
 
-        //GetComponent(MeshRenderer).enabled = visible;
-        visible = ! visible;
+        if (!visible)
+        {
+            visible = ! visible;
+            GetComponent<Renderer>().enabled = visible;
+        }
+
 
     }
 
-    int getHP()
+    public int getHP()
     {
             return this.pointDeVie;
     }
 
-    bool getVisibilite()
+    public bool getVisibilite()
     {
         return this.visible;
     }

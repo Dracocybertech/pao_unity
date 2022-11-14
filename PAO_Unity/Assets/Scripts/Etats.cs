@@ -9,11 +9,10 @@ public class Etats : MonoBehaviour
       voitR,
       voitJ,
       jBlesse,
-      voitP,
       suitJ,
-      seCogne,
+      suitDP, //suit dernière position
       aPorteeDuJ,
-      aPorteeDeP,
+      seul // joueur mort
       //Rajouter se cacher et virer des portes.
    };
 
@@ -31,11 +30,7 @@ public class Etats : MonoBehaviour
       frapper,
       suivre, //très haut niveau
       attendre,
-      ouvrir,
-      avancer, //peut-être stupide donc mettre un point de passage
-      demitour,
-      tournerD,
-      tournerG
+      explorer
    };
 
 

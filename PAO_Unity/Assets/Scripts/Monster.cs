@@ -7,8 +7,9 @@ public class Monster : MonoBehaviour
 {
 
     public bool visible = true;
+    public Etats.Etat etat;
 
-    Etats.Action ordre;
+    Etats.Action ordre = Etats.Action.attendre;
 
 
     [SerializeField] public Transform Target; //cible de l'ennemi
@@ -17,7 +18,6 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //setVisibilite();
         //agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
@@ -26,46 +26,85 @@ public class Monster : MonoBehaviour
     {
 
         agent.destination=Target.position;
-        //donnerOrdre(ordre);
+        donnerOrdre(ordre);
 
     }
 
-    void setVisibilite()
+    public void setVisibilite()
+    {
+        if (visible)
+        {
+            visible = ! visible;
+            GetComponent<Renderer>().enabled = visible;
+        }
+
+        if (!visible)
+        {
+            visible = ! visible;
+            GetComponent<Renderer>().enabled = visible;
+        }
+
+
+    }
+
+    public Etats.Etat getEtat()
+    {
+        return this.etat;
+    }
+
+    void detection()
     {
 
-        //GetComponent(MeshRenderer).enabled = visible;
-        //visible = ! visible;
+    }
+
+    void frapper()
+    {
 
     }
 
-    bool getVisibilite()
+    void suivre()
+    {
+
+    }
+
+    void explorer()
+    {
+
+    }
+
+    void attendre()
+    {
+
+    }
+
+    public bool getVisibilite()
     {
         return this.visible;
     }
 
-    /*void donnerOrdre(Etats.Action ordre)
+    public void donnerOrdre(Etats.Action ordre)
     {
         switch (ordre)
         {
             case Etats.Action.frapper:
-                frapper();
+                this.frapper();
+                break;
             case Etats.Action.suivre:
-                suivre();
+               this.suivre();
+               break;
             case Etats.Action.attendre:
-                attendre();
-            case Etats.Action.ouvrir:
-                ouvrir();
-            case Etats.Action.avancer:
-                avancer();
-            case Etats.Action.demitour:
-                demitour();
-            case Etats.Action.tournerD:
-                tournerD();
-            case Etats.Action.tournerG:
-                tournerG();
+                this.attendre();
+                break;
+            case Etats.Action.explorer:
+                this.explorer();
+                break;
+            default:
+                this.attendre();
+                break;
+
         }
 
-    }*/
+    }
 
 
 }
