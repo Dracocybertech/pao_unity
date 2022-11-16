@@ -5,11 +5,13 @@
 !/Rapport
 !/README.md
 !/RL_Python
-#Intégrer le dossier Scripts et prefabs de PAO Unity
+#Intégrer le dossier Scripts, scene et prefabs à partager de PAO Unity
 !/PAO_Unity
 /PAO_Unity/*
 !/PAO_Unity/Assets
 /PAO_Unity/Assets/*
-!/PAO_Unity/Assets/Scripts/*
-!/PAO_Unity/Assets/Scenes/*
+!/PAO_Unity/Assets/Scripts
+
+!/PAO_Unity/Assets/Scenes
+!/PAO_Unity/Assets/PrefabsToShare
 
