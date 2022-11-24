@@ -51,14 +51,11 @@ Semaine 18_10_2022
 	Marine :
 	
 Semaine 25_10_2022
-	Ryan : 
+	Ryan : Création du prefab PorteV3 qui est utilisable
 	Ambre :
 	Marine :
 
-Semaine 01_11_2022
-	Ryan :
-	Ambre :
-	Marine :
+Semaine 01_11_2022 Vacances
 
 Semaine 08_11_2022
 	Ryan : Début GameMaster.
@@ -66,12 +63,12 @@ Semaine 08_11_2022
 	Marine :
 
 Semaine 15_11_2022
-	Ryan :
+	Ryan :Code qui compile mais logique pas encore bonne
 	Ambre :
 	Marine :
 
 Semaine 22_11_2022
-	Ryan :
+	Ryan : Rédaction des ordres. Le monstre peut suivre le joueur grâce au AI.NavMesh.
 	Ambre :
 	Marine :
 

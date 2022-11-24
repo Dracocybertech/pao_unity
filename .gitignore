@@ -1,5 +1,6 @@
 #J'exclue tout
 /*
+/*.meta
 #Sauf les dossiers :
 !/Journal, reunions, ressources
 !/Rapport
@@ -12,6 +13,6 @@
 /PAO_Unity/Assets/*
 !/PAO_Unity/Assets/Scripts
 
-!/PAO_Unity/Assets/Scenes
+/PAO_Unity/Assets/Scenes
 !/PAO_Unity/Assets/PrefabsToShare
 

@@ -16,15 +16,6 @@ public class Etats : MonoBehaviour
       //Rajouter se cacher et virer des portes.
    };
 
-
-
-   /*public enum Etat
-   {
-      Obstacle,
-      Joueur,
-      Rien
-   }*/
-
    public enum Action
    {
       frapper,

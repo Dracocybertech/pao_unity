@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using static Etats;
 
 public class Monster : MonoBehaviour
@@ -11,13 +12,22 @@ public class Monster : MonoBehaviour
 
     Etats.Action ordre = Etats.Action.attendre;
 
+    Vector3 DPCible;
 
-    [SerializeField] public Transform Target; //cible de l'ennemi
-    [SerializeField] public UnityEngine.AI.NavMeshAgent agent; //zone bleu de déplacement
+    Renderer leRenderer;
+
+    MeshCollider leCollider;
+
+    [SerializeField] public Transform target; //cible de l'ennemi
+    NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+        leRenderer= GameObject.Find("RockGolemMesh").GetComponent<SkinnedMeshRenderer>(); // non prioritaire
+        leCollider = GameObject.Find("RockGolemMesh").GetComponent<MeshCollider>();
+        setVisibilite();
         //agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
@@ -25,7 +35,7 @@ public class Monster : MonoBehaviour
     void Update()
     {
 
-        agent.destination=Target.position;
+        agent.destination = target.position;
         donnerOrdre(ordre);
 
     }
@@ -35,26 +45,44 @@ public class Monster : MonoBehaviour
         if (visible)
         {
             visible = ! visible;
-            GetComponent<Renderer>().enabled = visible;
+
+            leRenderer.enabled = visible;
+            leCollider.enabled = visible;
         }
 
         if (!visible)
         {
             visible = ! visible;
-            GetComponent<Renderer>().enabled = visible;
+            leRenderer.enabled = visible;
+            leCollider.enabled = visible;
         }
 
+
+    }
+
+
+    public void setVueJ()
+    {
+        this.etat = Etats.Etat.voitJ;
+
+    }
+
+    public void setVueR()
+    {
+         this.etat = Etats.Etat.voitR;
+
+    }
+
+    public void setDPJoueur()
+    {
+
+        this.DPCible = target.position;
 
     }
 
     public Etats.Etat getEtat()
     {
         return this.etat;
-    }
-
-    void detection()
-    {
-
     }
 
     void frapper()

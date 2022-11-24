@@ -11,7 +11,8 @@ public class gameMaster : MonoBehaviour
         {"seul",100},
         {"jBlesse", 25},
         {"aPorteeDuJ",10},
-        {"suitJ",2},
+        {"suitJ",5},
+        {"voitj",2},
         {"suitDP",1},
         {"voitR",-1}
     };
@@ -35,25 +36,17 @@ public class gameMaster : MonoBehaviour
 
     }
 
-    EtatsMonstre EM = new EtatsMonstre();
+    EtatsMonstre EM;
 
-    EtatsJoueur EJ = new EtatsJoueur();
+    EtatsJoueur EJ;
 
-    GameObject lePlayer = GameObject.Find("Player");
+    GameObject lePlayer;
 
-    GameObject leMonstre = GameObject.Find("PBR_Golem");
+    GameObject leMonstre;
 
     Joueur lePlayerScript;
 
     Monster leMonstreScript;
-
-
-    public gameMaster()
-    {
-        lePlayerScript = lePlayer.GetComponent<Joueur>();
-
-        leMonstreScript = leMonstre.GetComponent<Monster>();
-    }
 
     //Etats.Action action = null;
 
@@ -62,9 +55,22 @@ public class gameMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        EM = new EtatsMonstre();
+
+        EJ = new EtatsJoueur();
+
+        lePlayer = GameObject.Find("Player");
+
+        leMonstre = GameObject.Find("PBR_Golem");
+
+        leMonstreScript = leMonstre.GetComponent<Monster>();
+
+        lePlayerScript = lePlayer.GetComponent<Joueur>();
+
         getEtats();
 
-        //Etats.Action ordre = qtable(etat,récompense);
+        //Etats.Action ordre = qtable(EM.etat,recompense);
 
         //leMonstre.donnerOrdre(ordre);
         
