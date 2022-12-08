@@ -7,10 +7,14 @@ using static Etats;
 public class Monster : MonoBehaviour
 {
 
-    public bool visible = true;
+    public bool visible;
     public Etats.Etat etat;
 
-    Etats.Action ordre = Etats.Action.attendre;
+    public Etats.Action ordre;
+
+    GameObject leJoueur;
+
+    Joueur leJoueurScr;
 
     Vector3 DPCible;
 
@@ -24,11 +28,17 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Debug.Log("I'm attached to " + gameObject.name);
+        //Debug.Log("Visible ?" + visible);
+
         agent = GetComponent<NavMeshAgent>();
+        leJoueur = GameObject.Find("Player");
+        leJoueurScr = leJoueur.GetComponent<Joueur>();
         leRenderer= GameObject.Find("RockGolemMesh").GetComponent<SkinnedMeshRenderer>(); // non prioritaire
         leCollider = GameObject.Find("RockGolemMesh").GetComponent<MeshCollider>();
         setVisibilite();
-        //agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+
     }
 
     // Update is called once per frame
@@ -40,22 +50,60 @@ public class Monster : MonoBehaviour
 
     }
 
+    // Gestion de la visibilité
+
     public void setVisibilite()
     {
+        visible = !visible;
+
         if (visible)
         {
             visible = ! visible;
 
             leRenderer.enabled = visible;
             leCollider.enabled = visible;
-        }
 
-        if (!visible)
+            Debug.Log("Renderer: " +leRenderer.enabled);
+            Debug.Log("Collider: " +leCollider.enabled);
+        } else
         {
             visible = ! visible;
             leRenderer.enabled = visible;
             leCollider.enabled = visible;
+
+            Debug.Log("Renderer: " +leRenderer.enabled);
+            Debug.Log("Collider: " +leCollider.enabled);
+
+
         }
+
+    }
+
+    public bool getVisibilite()
+    {
+        return this.visible;
+    }
+
+
+    //Getteur Setteur des Etats du monstre
+
+
+    public void setAPorteeDuJ()
+    {
+
+
+
+        if (this.etat == Etats.Etat.aPorteeDuJ)
+        {
+            this.setVueJ();
+
+        } else
+        {
+
+            this.etat = Etats.Etat.aPorteeDuJ;
+
+        }
+
 
 
     }
@@ -73,10 +121,15 @@ public class Monster : MonoBehaviour
 
     }
 
-    public void setDPJoueur()
+    public void setjBlesse()
     {
+        this.etat = Etats.Etat.jBlesse;
 
-        this.DPCible = target.position;
+    }
+
+    public void setjMort()
+    {
+        this.etat = Etats.Etat.seul;
 
     }
 
@@ -85,30 +138,59 @@ public class Monster : MonoBehaviour
         return this.etat;
     }
 
-    void frapper()
+
+    //Getteur Setteur de Déplacement
+
+
+    public void setDPJoueur()
     {
 
+        this.DPCible = target.position;
+
+    }
+
+
+
+    //Execution des ordres
+
+
+    void frapper()
+    {
+        if (this.getEtat() == Etats.Etat.aPorteeDuJ)
+        {
+
+            leJoueurScr.estTouche();
+
+            if(leJoueurScr.vivant())
+            {
+                this.setjBlesse();
+
+
+            } else
+            {
+
+                this.setjMort();
+
+            }
+
+        }
     }
 
     void suivre()
     {
-
+        this.target = GameObject.Find("Player").transform;
     }
 
     void explorer()
     {
-
+        //nouvelleDest()
     }
 
     void attendre()
     {
-
+        this.target = gameObject.transform;
     }
 
-    public bool getVisibilite()
-    {
-        return this.visible;
-    }
 
     public void donnerOrdre(Etats.Action ordre)
     {
@@ -118,6 +200,7 @@ public class Monster : MonoBehaviour
                 this.frapper();
                 break;
             case Etats.Action.suivre:
+                //Debug.Log("Ordre de suivre");
                this.suivre();
                break;
             case Etats.Action.attendre:
