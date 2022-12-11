@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using static Etats;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 
 public class gameMaster : MonoBehaviour
@@ -48,6 +50,8 @@ public class gameMaster : MonoBehaviour
 
     Monster leMonstreScript;
 
+    bool gameOver;
+
     //Etats.Action action = null;
 
     //QTable = new Qtable; A compléter
@@ -55,7 +59,6 @@ public class gameMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         EM = new EtatsMonstre();
 
         EJ = new EtatsJoueur();
@@ -73,23 +76,41 @@ public class gameMaster : MonoBehaviour
         //Etats.Action ordre = qtable(EM.etat,recompense);
 
         //leMonstre.donnerOrdre(ordre);
-        
     }
 
     // fixedUpdate is called once per frame
-    void fixedUpdate()
+    void FixedUpdate()
     {
+        if (!gameOver)
+        {
+            //A chaque chgt d'etat quand il y a event et reping toutes les 10 secondes. Buter le joueur exprès au début de la game pour que la récompense soit obtenue.
 
-        //A chaque chgt d'etat quand il y a event et reping toutes les 10 secondes. Buter le joueur exprès au début de la game pour que la récompense soit obtenue.
+            getEtats();
 
-        getEtats();
+            //Action ordre = qtable(etat,récompense);
 
-        //Action ordre = qtable(etat,récompense);
+            //leMonstre.donnerOrdre(ordre);
 
-        //leMonstre.donnerOrdre(ordre);
-        
+            int HPJoueur = lePlayerScript.getHP();
+
+            if (HPJoueur == 0)
+            {
+                this.GameOver();
+            }
+        }
     }
 
+
+    public void GameOver()
+    {
+        gameOver = true;
+        //Debug.Log("GameOver triggered");
+        GameObject.Find("GameOverScreen").GetComponent<RawImage>().enabled = true;
+        lePlayer.GetComponent<CharacterController>().enabled = false;
+        lePlayer.GetComponent<CharacterMotor>().enabled = false;
+        Destroy(leMonstre);
+
+    }
 
     void getEtats()
     {

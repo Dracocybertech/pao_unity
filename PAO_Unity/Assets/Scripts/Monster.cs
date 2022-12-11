@@ -12,11 +12,25 @@ public class Monster : MonoBehaviour
 
     public Etats.Action ordre;
 
+    public int timerVal;
+
+    public int vitesseVoitJ;
+
+    public int vitesseVoitR;
+
+    int timer = 0;
+
     GameObject leJoueur;
 
-    Joueur leJoueurScr;
+    GameObject Waypoint;
 
-    Vector3 DPCible;
+    GameObject WaypointDPJ;
+
+    GameObject ExploRange;
+
+    Bounds borduresCercle;
+
+    Joueur leJoueurScr;
 
     Renderer leRenderer;
 
@@ -28,30 +42,36 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("I'm attached to " + gameObject.name);
-        //Debug.Log("Visible ?" + visible);
+        Waypoint = GameObject.Find("Waypoint");
+
+        WaypointDPJ = GameObject.Find("WaypointDPJ");
+
+        ExploRange = GameObject.Find("ExploRange");
 
         agent = GetComponent<NavMeshAgent>();
         leJoueur = GameObject.Find("Player");
         leJoueurScr = leJoueur.GetComponent<Joueur>();
-        leRenderer= GameObject.Find("RockGolemMesh").GetComponent<SkinnedMeshRenderer>(); // non prioritaire
+        leRenderer= GameObject.Find("RockGolemMesh").GetComponent<SkinnedMeshRenderer>();
         leCollider = GameObject.Find("RockGolemMesh").GetComponent<MeshCollider>();
         setVisibilite();
-
-
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
-
         agent.destination = target.position;
-        donnerOrdre(ordre);
+        this.setSpeed();
 
+        if (timer == 0)
+        {
+            donnerOrdre(ordre);
+        } else
+        {
+            timer = timer - 1;
+        }
     }
 
     // Gestion de la visibilité
-
     public void setVisibilite()
     {
         visible = !visible;
@@ -73,8 +93,6 @@ public class Monster : MonoBehaviour
 
             Debug.Log("Renderer: " +leRenderer.enabled);
             Debug.Log("Collider: " +leCollider.enabled);
-
-
         }
 
     }
@@ -90,29 +108,18 @@ public class Monster : MonoBehaviour
 
     public void setAPorteeDuJ()
     {
-
-
-
         if (this.etat == Etats.Etat.aPorteeDuJ)
         {
             this.setVueJ();
-
         } else
         {
-
             this.etat = Etats.Etat.aPorteeDuJ;
-
         }
-
-
-
     }
-
 
     public void setVueJ()
     {
         this.etat = Etats.Etat.voitJ;
-
     }
 
     public void setVueR()
@@ -124,13 +131,11 @@ public class Monster : MonoBehaviour
     public void setjBlesse()
     {
         this.etat = Etats.Etat.jBlesse;
-
     }
 
     public void setjMort()
     {
         this.etat = Etats.Etat.seul;
-
     }
 
     public Etats.Etat getEtat()
@@ -141,14 +146,43 @@ public class Monster : MonoBehaviour
 
     //Getteur Setteur de Déplacement
 
-
-    public void setDPJoueur()
+    public void setSpeed()
     {
-
-        this.DPCible = target.position;
+        if (this.etat == Etats.Etat.voitJ)
+            agent.speed = vitesseVoitJ;
+        else
+            agent.speed = vitesseVoitR;
 
     }
 
+
+    public void setDPJoueur()
+    {
+        WaypointDPJ.transform.position = leJoueur.transform.position;
+    }
+
+    public void nouvelleDest()
+    {
+        Debug.Log("nouvelleDest triggered");
+        this.randomWaypoint();
+        this.target = Waypoint.transform;
+    }
+
+    public void randomWaypoint()
+    {
+        borduresCercle = ExploRange.GetComponent<SphereCollider>().bounds;
+
+        Waypoint.transform.position = this.randomVect3(borduresCercle);
+    }
+
+    public Vector3 randomVect3(Bounds bounds)
+    {
+        return new Vector3(
+            Random.Range(bounds.min.x, bounds.max.x),
+            0,
+            Random.Range(bounds.min.z, bounds.max.z)
+        );
+    }
 
 
     //Execution des ordres
@@ -158,36 +192,36 @@ public class Monster : MonoBehaviour
     {
         if (this.getEtat() == Etats.Etat.aPorteeDuJ)
         {
-
             leJoueurScr.estTouche();
 
             if(leJoueurScr.vivant())
             {
                 this.setjBlesse();
-
-
             } else
             {
-
                 this.setjMort();
-
             }
-
         }
     }
 
     void suivre()
     {
-        this.target = GameObject.Find("Player").transform;
+        if (this.etat == Etats.Etat.voitJ)
+        {
+            this.target = leJoueur.transform;
+        } else
+            this.target = WaypointDPJ.transform;
     }
 
     void explorer()
     {
-        //nouvelleDest()
+        this.timer = timerVal;
+        this.nouvelleDest();
     }
 
     void attendre()
     {
+        this.timer = timerVal;
         this.target = gameObject.transform;
     }
 

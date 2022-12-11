@@ -18,6 +18,7 @@ public class Joueur : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         //setVisibilite();
         
     }
@@ -81,9 +82,17 @@ public class Joueur : MonoBehaviour
 
     public void estTouche()
     {
-        this.setDamage(1);
-        this.aEteTouche = true;
-        this.timer = 180;
+        if (timer==0)
+        {
+            this.setDamage(1);
+            this.aEteTouche = true;
+            this.timer = 180;
+        } else
+        {
+            Debug.Log("Période d'invulnérabilité");
+
+        }
+
 
     }
 

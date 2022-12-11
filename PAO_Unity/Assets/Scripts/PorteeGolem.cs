@@ -39,11 +39,11 @@ public class PorteeGolem : MonoBehaviour
     {
         if (other.name == "Player")
         {
-            Debug.Log("Joueur entré dans la range de coup du monstre");
+            //Debug.Log("Joueur entré dans la range de coup du monstre");
 
             leMonstreIA.setAPorteeDuJ();
 
-            if (testeurDegats)
+            if (testeurDegats) //testeur de dégâts manuel
                 leJoueurScr.estTouche();
 
 
@@ -60,7 +60,7 @@ public class PorteeGolem : MonoBehaviour
     {
         if (other.name == "Player")
         {
-            Debug.Log("Joueur sorti de la range de coup du monstre");
+            //Debug.Log("Joueur sorti de la range de coup du monstre");
 
             leMonstreIA.setAPorteeDuJ();
         }
