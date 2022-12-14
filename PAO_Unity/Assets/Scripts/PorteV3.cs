@@ -80,13 +80,13 @@ public class PorteV3 : MonoBehaviour
     {
         if (enter)
         {
-            if (!guiLocked && !peutDeverrouiller)
+            if (!guiLocked && !peutDeverrouiller) //Porte déverrouillée
                 GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 155, 30), "Press 'F' to " + (open ? "close" : "open") + " the door");
 
-            if (guiLocked)
+            if (guiLocked) //Porte verrouillée mais pas la clé dans l'inventaire
                 GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 155, 30), "Door locked. Find the key");
 
-            if (peutDeverrouiller)
+            if (peutDeverrouiller) // Porte verrouillée mais clé dans l'inventaire.
                 GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 155, 30), "Press 'G' to unlock");
 
         }
@@ -102,6 +102,7 @@ public class PorteV3 : MonoBehaviour
         {
             enter = true; //je suis dans le collider
 
+            //Le joueur a t il la clé ?
             if (other.GetComponent<CharacterMotor>().possedeObjet(this.nomCle) && verrouille)
             {
                     peutDeverrouiller = true;

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class gameMaster : MonoBehaviour
 {
-
+    //Dictionnaire des récompenses en fonction des états pour la QTable
     Dictionary<string,int> recompenses = new Dictionary<string, int>(){
         {"seul",100},
         {"jBlesse", 25},
@@ -19,6 +19,7 @@ public class gameMaster : MonoBehaviour
         {"voitR",-1}
     };
 
+    //Plus utile
     public struct EtatsJoueur
     {
 
@@ -29,6 +30,7 @@ public class gameMaster : MonoBehaviour
 
     }
 
+    //Plus utile
     public struct EtatsMonstre
     {
 
@@ -65,7 +67,7 @@ public class gameMaster : MonoBehaviour
 
         lePlayer = GameObject.Find("Player");
 
-        leMonstre = GameObject.Find("PBR_Golem");
+        leMonstre = GameObject.Find("Monstre");
 
         leMonstreScript = leMonstre.GetComponent<Monster>();
 
@@ -81,9 +83,10 @@ public class gameMaster : MonoBehaviour
     // fixedUpdate is called once per frame
     void FixedUpdate()
     {
+        //Si pas de gameover, déroulement normal.
         if (!gameOver)
         {
-            //A chaque chgt d'etat quand il y a event et reping toutes les 10 secondes. Buter le joueur exprès au début de la game pour que la récompense soit obtenue.
+            //A FAIRE : A chaque chgt d'etat quand il y a event et reping toutes les 10 secondes. Buter le joueur exprès au début de la game pour que la récompense soit obtenue.
 
             getEtats();
 
@@ -98,11 +101,14 @@ public class gameMaster : MonoBehaviour
                 this.GameOver();
             }
         }
+        //Si gameover, on arrête le gameMaster qui n'a plus de travail.
     }
 
 
     public void GameOver()
     {
+
+        //Désactivation des gameObjects Monstre et Joueur puis afficher l'image de fin.
         gameOver = true;
         //Debug.Log("GameOver triggered");
         GameObject.Find("GameOverScreen").GetComponent<RawImage>().enabled = true;
@@ -112,6 +118,7 @@ public class gameMaster : MonoBehaviour
 
     }
 
+    //Utile pour le monstre, pas pour le joueur, à modifier
     void getEtats()
     {
         EJ.position = lePlayer.transform.position;

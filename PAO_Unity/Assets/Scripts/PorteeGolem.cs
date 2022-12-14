@@ -43,7 +43,7 @@ public class PorteeGolem : MonoBehaviour
 
             leMonstreIA.setAPorteeDuJ();
 
-            if (testeurDegats) //testeur de dégâts manuel
+            if (testeurDegats) //testeur de dégâts manuel qui inflige des dégâts dès que le joueur entre dans la zone.
                 leJoueurScr.estTouche();
 
 

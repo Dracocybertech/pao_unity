@@ -38,7 +38,7 @@ public class Joueur : MonoBehaviour
 
     }
 
-
+    // Activer la visibilité. Sera utile plus tard pour que le monstre ne puisse pas voir le joueur si besoin.
     public void setVisibilite()
     {
         if (visible)
@@ -56,11 +56,13 @@ public class Joueur : MonoBehaviour
 
     }
 
+    //Getter setter des dégâts
     public int getHP()
     {
         return this.pointDeVie;
     }
 
+    //Retire "coup" hp
     public void setDamage(int coup)
     {
         this.pointDeVie = this.pointDeVie - coup;
@@ -80,6 +82,7 @@ public class Joueur : MonoBehaviour
 
     }
 
+    //Permet de blesser le joueur et de créer une période d'invulnérabilité de 3 secondes.
     public void estTouche()
     {
         if (timer==0)

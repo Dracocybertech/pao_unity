@@ -24,8 +24,10 @@ public class EyeSight : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // Lance un rayon à dont l'origine est les yeux du monstre
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
+            //Affichage d'un rayon de débug
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
             if (hit.collider == lePlayer.GetComponent<CapsuleCollider>())
                 Debug.Log("A détecté le joueur normalement");

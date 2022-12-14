@@ -59,9 +59,13 @@ public class Monster : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        //Donner la cible à l'Agent
         agent.destination = target.position;
+        //Mettre à jour la vitesse en fct de l'état
         this.setSpeed();
 
+        //Permet de bloquer le waypoint d'exploration
         if (timer == 0)
         {
             donnerOrdre(ordre);
@@ -71,7 +75,7 @@ public class Monster : MonoBehaviour
         }
     }
 
-    // Gestion de la visibilité
+    // Gestion de la visibilité afin de désactiver le MeshCollider et le Renderer qui affiche le monstre
     public void setVisibilite()
     {
         visible = !visible;
@@ -146,6 +150,8 @@ public class Monster : MonoBehaviour
 
     //Getteur Setteur de Déplacement
 
+
+    //Fixe la vitesse en fonction de si le monstre voit le joueur.
     public void setSpeed()
     {
         if (this.etat == Etats.Etat.voitJ)
@@ -155,12 +161,13 @@ public class Monster : MonoBehaviour
 
     }
 
-
+    // Fixer le waypoint de la dernière position du joueur sur le joueur, au moment où il quitte la vue du monstre.
     public void setDPJoueur()
     {
         WaypointDPJ.transform.position = leJoueur.transform.position;
     }
 
+    //Déplace un waypoint d'exploration
     public void nouvelleDest()
     {
         Debug.Log("nouvelleDest triggered");
@@ -168,6 +175,7 @@ public class Monster : MonoBehaviour
         this.target = Waypoint.transform;
     }
 
+    //Cherche une localisation correcte pour le waypoint
     public void randomWaypoint()
     {
         borduresCercle = ExploRange.GetComponent<SphereCollider>().bounds;
@@ -175,6 +183,7 @@ public class Monster : MonoBehaviour
         Waypoint.transform.position = this.randomVect3(borduresCercle);
     }
 
+    //Génère des coordonnées dans les bordures du cercle.
     public Vector3 randomVect3(Bounds bounds)
     {
         return new Vector3(
